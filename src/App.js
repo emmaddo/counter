@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+function App(){
+
+  let [count, setCount] = useState(0);
+
+  function increaseCount(){
+    if(count < 10){
+      setCount(count + 1);
+    }
+  }
+  
+  function decreaseCount(){
+    if(count > 0){
+      setCount(count - 1);
+    }
+  }
+ useEffect(()=>{
+  console.log("A click occured");
+ });
+  return(
+    <div>
+      <center><h2>Hello React!</h2>
+      <h3>{count}</h3>
+      <button onClick={increaseCount}>Increase Count</button >&nbsp;&nbsp;<button onClick={decreaseCount}>Decrease Count</button>
+      </center>
     </div>
-  );
+  ); 
 }
 
 export default App;
