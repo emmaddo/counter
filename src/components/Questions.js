@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
-function Questions(){
-    return(
-        <div>
-            <center>
+function Questions() {
+  return (
+    <div>
+       <center>
                     <p>
                       <b>  Q1. List 10 States in the United States of America </b>
                     </p>
@@ -14,8 +14,8 @@ function Questions(){
                         </textarea>
                     </p>
             </center>
-        </div>
-    );
+    </div>
+  );
 }
 
 export default Questions;
